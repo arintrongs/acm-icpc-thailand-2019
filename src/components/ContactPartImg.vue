@@ -7,8 +7,7 @@
         style="display: block; margin-left: auto; margin-right: auto; max-height: 200px; max-width: 50vw;"
       />
     </div>
-    <h2 class="my-display-1 pt-4">{{ name }}</h2>
-    <p>{{ contact_person }}<br />{{ email }}<br />{{ tel }}</p>
+    <h2 class="my-display-1 pt-4" style="text-align: center;">{{ name }}</h2>
   </div>
 </template>
 <script>
@@ -17,10 +16,7 @@ export default {
   name: 'ContactPart',
   props: {
     name: String,
-    img: String,
-    contact_person: String,
-    email: String,
-    tel: String
+    img: String
   },
   data: () => ({}),
   computed: {},
