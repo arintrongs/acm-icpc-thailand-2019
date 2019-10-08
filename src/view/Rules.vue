@@ -1,6 +1,12 @@
 <template>
   <div class="px-5 my-5">
-    <v-btn v-on:click="ruleType = 'online'" color="#6b0000" dark depressed style="margin-left: 0">Online</v-btn>
+    <v-btn
+      v-on:click="ruleType = 'online'"
+      color="#6b0000"
+      dark
+      depressed
+      style="margin-left: 0"
+    >Online</v-btn>
     <v-btn v-on:click="ruleType = 'regional'" color="#6b0000" dark depressed>Regional</v-btn>
     <transition name="fade" mode="out-in" duration="400">
       <div v-if="ruleType === 'online'">
@@ -30,7 +36,7 @@ export default {
       ruleType: 'online',
       online_rules: [
         {
-          title: 'ICPC Regional Rules for 2019 Online',
+          title: 'ICPC Regional Rules for 2019 : Online',
           introduction:
             'Competition rules are based on ACM-ICPC Regionals and World Finals. The rules are partly adjusted to better suit the competition area. Competitors and coaches should be well aware and strictly conform to the rules in order to ensure equality and fairness of the competition.',
           body: [
@@ -103,7 +109,7 @@ export default {
       ],
       regional_rules: [
         {
-          title: 'ICPC Regional Rules for 2019 Regionals',
+          title: 'ICPC Regional Rules for 2019 : On-site',
           introduction:
             'The following has been excerpted from ICPC Regional Rules for 2019 Regionals (https://icpc.baylor.edu/regionals/rules)',
           body: [
