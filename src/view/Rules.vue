@@ -23,6 +23,13 @@
           </div>
         </div>
       </transition>
+
+      <p>
+        For more information, please send an email to
+        <a
+          href="mailto::Arin.T@student.chula.ac.th"
+        >Arin.T@student.chula.ac.th</a>
+      </p>
     </div>
   </div>
 </template>

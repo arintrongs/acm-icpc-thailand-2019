@@ -92,6 +92,17 @@
       <h2 class="my-display-1 pb-2">Transportation</h2>
       <v-btn href="/#/transportation" depressed color="#6b0000" right dark>More</v-btn>
     </div>
+    <div class="py-5">
+      <svg width="45%" height="1.2vh">
+        <rect width="100%" height="100%" style="fill:#6b0000;stroke-width:0;stroke:rgb(0,0,0)" />
+      </svg>
+    </div>
+    <p>
+      For more information, please send an email to
+      <a
+        href="mailto::Arin.T@student.chula.ac.th"
+      >Arin.T@student.chula.ac.th</a>
+    </p>
   </div>
 </template>
 

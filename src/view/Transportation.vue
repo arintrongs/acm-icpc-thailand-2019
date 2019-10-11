@@ -40,6 +40,13 @@
         <br />
         <br />Please note that the information might be changed as needed. We will keep you updated via email and on the website.
       </p>
+      <br />
+      <p>
+        For more information, please send an email to
+        <a
+          href="mailto::Arin.T@student.chula.ac.th"
+        >Arin.T@student.chula.ac.th</a>
+      </p>
     </div>
   </div>
 </template>
