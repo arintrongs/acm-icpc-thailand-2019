@@ -19,9 +19,12 @@
       ></v-toolbar-side-icon>
       <v-toolbar-items class="not-hamburger">
         <v-btn :color="colorToolbarTextByScroll" to="/" flat>Home</v-btn>
-        <v-btn :color="colorToolbarTextByScroll" to="/contest" flat>Contest</v-btn>
+
         <v-btn :color="colorToolbarTextByScroll" to="/rules" flat>Rules</v-btn>
+        <v-btn :color="colorToolbarTextByScroll" to="/accomodations" flat>Accomodations</v-btn>
+        <v-btn :color="colorToolbarTextByScroll" to="/transportation" flat>Transportation</v-btn>
         <v-btn :color="colorToolbarTextByScroll" to="/contacts" flat>Contacts & Hosts</v-btn>
+        <v-btn :color="colorToolbarTextByScroll" to="/about" flat>About</v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <v-parallax :src="red_castle" height="550" style="padding: 0 !important;">
@@ -32,15 +35,9 @@
         <transition name="slide-fade">
           <div v-if="isVisible" class="px-5 mt-3" style="display: flex;">
             <div>
-              <h2 class="text-shadow text-body">
-                Online Round:
-              </h2>
-              <h2 class="text-shadow text-body">
-                Register Date: 26 Aug - 07 Oct 2019
-              </h2>
-              <h2 class="text-shadow text-body">
-                Contest Date: 18 Oct 2019
-              </h2>
+              <h2 class="text-shadow text-body">Online Round:</h2>
+              <h2 class="text-shadow text-body">Register Date: 26 Aug - 07 Oct 2019</h2>
+              <h2 class="text-shadow text-body">Contest Date: 18 Oct 2019</h2>
               <v-btn
                 large
                 round
@@ -54,20 +51,16 @@
                 class="register_btn-text"
                 id="register_btn"
               >
-                <span><v-icon class="register_btn-icon">create</v-icon> Online</span>
+                <span>
+                  <v-icon class="register_btn-icon">create</v-icon>Online
+                </span>
               </v-btn>
             </div>
             <div class="partition mx-3" />
             <div>
-              <h2 class="text-shadow text-body">
-                Regional Round:
-              </h2>
-              <h2 class="text-shadow text-body">
-                Register Date: 09 Sep - 07 Oct 2019
-              </h2>
-              <h2 class="text-shadow text-body">
-                Contest Date: 02 Nov - 03 Nov 2019
-              </h2>
+              <h2 class="text-shadow text-body">Regional On-site Round:</h2>
+              <h2 class="text-shadow text-body">Register Date: 09 Sep - 07 Oct 2019</h2>
+              <h2 class="text-shadow text-body">Contest Date: 02 Nov - 03 Nov 2019</h2>
               <v-btn
                 large
                 round
@@ -79,7 +72,9 @@
                 target="_blank"
                 class="register_btn-text"
               >
-                <span><v-icon class="register_btn-icon">create</v-icon> Regional</span>
+                <span>
+                  <v-icon class="register_btn-icon">create</v-icon>Regional
+                </span>
               </v-btn>
             </div>
           </div>
@@ -107,7 +102,9 @@
       >
         <template v-slot:activator>
           <v-btn v-model="fab" dark round large color="#6b0000" @click="updateShowFAB">
-            <span v-if="!showFAB"><v-icon>create</v-icon> Register</span>
+            <span v-if="!showFAB">
+              <v-icon>create</v-icon>Register
+            </span>
             <v-icon v-if="showFAB">close</v-icon>
           </v-btn>
         </template>
@@ -155,26 +152,32 @@
             <router-link
               style="text-decoration: none; color: white; font-size: 20px; font-weight:300; padding-top: 20px; padding-left: 20px"
               to="/"
-              >Home</router-link
-            >
+            >Home</router-link>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile>
-          <v-list-tile-content>
-            <router-link
-              style="text-decoration: none; color: white; font-size: 20px; font-weight:300; padding-top: 20px; padding-left: 20px"
-              to="/contest"
-              >Contest</router-link
-            >
-          </v-list-tile-content>
-        </v-list-tile>
+
         <v-list-tile>
           <v-list-tile-content>
             <router-link
               style="text-decoration: none; color: white; font-size: 20px; font-weight:300; padding-top: 20px; padding-left: 20px"
               to="/rules"
-              >Rules</router-link
-            >
+            >Rules</router-link>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+          <v-list-tile-content>
+            <router-link
+              style="text-decoration: none; color: white; font-size: 20px; font-weight:300; padding-top: 20px; padding-left: 20px"
+              to="/accomodations"
+            >Accomodations</router-link>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+          <v-list-tile-content>
+            <router-link
+              style="text-decoration: none; color: white; font-size: 20px; font-weight:300; padding-top: 20px; padding-left: 20px"
+              to="/transportation"
+            >Transportation</router-link>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile>
@@ -182,8 +185,15 @@
             <router-link
               style="text-decoration: none; color: white; font-size: 20px; font-weight:300; padding-top: 20px; padding-left: 20px"
               to="/contacts"
-              >Contacts & Hosts</router-link
-            >
+            >Contacts & Hosts</router-link>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+          <v-list-tile-content>
+            <router-link
+              style="text-decoration: none; color: white; font-size: 20px; font-weight:300; padding-top: 20px; padding-left: 20px"
+              to="/about"
+            >About</router-link>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>

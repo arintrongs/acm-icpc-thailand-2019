@@ -1,27 +1,29 @@
 <template>
-  <div class="px-5 my-5">
-    <v-btn
-      v-on:click="ruleType = 'online'"
-      color="#6b0000"
-      dark
-      depressed
-      style="margin-left: 0"
-    >Online</v-btn>
-    <v-btn v-on:click="ruleType = 'regional'" color="#6b0000" dark depressed>Regional</v-btn>
-    <transition name="fade" mode="out-in" duration="400">
-      <div v-if="ruleType === 'online'">
-        <div v-for="(item, index) in online_rules" :key="index">
-          <RulePart :title="item.title" :introduction="item.introduction" :body="item.body"></RulePart>
+  <div>
+    <div class="container px-5 my-5">
+      <v-btn
+        v-on:click="ruleType = 'online'"
+        color="#6b0000"
+        dark
+        depressed
+        style="margin-left: 0"
+      >Online</v-btn>
+      <v-btn v-on:click="ruleType = 'regional'" color="#6b0000" dark depressed>Regional</v-btn>
+      <transition name="fade" mode="out-in" duration="400">
+        <div v-if="ruleType === 'online'">
+          <div v-for="(item, index) in online_rules" :key="index">
+            <RulePart :title="item.title" :introduction="item.introduction" :body="item.body"></RulePart>
+          </div>
         </div>
-      </div>
-    </transition>
-    <transition name="fade" mode="out-in" duration="400">
-      <div v-if="ruleType === 'regional'">
-        <div v-for="(item, index) in regional_rules" :key="index">
-          <RulePart :title="item.title" :introduction="item.introduction" :body="item.body"></RulePart>
+      </transition>
+      <transition name="fade" mode="out-in" duration="400">
+        <div v-if="ruleType === 'regional'">
+          <div v-for="(item, index) in regional_rules" :key="index">
+            <RulePart :title="item.title" :introduction="item.introduction" :body="item.body"></RulePart>
+          </div>
         </div>
-      </div>
-    </transition>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -349,6 +351,26 @@ export default {
                 {
                   text:
                     "Each Regional Contest Director determines whether contestants may bring materials for use during the contest.  Please see the specific regional rules at the ICPC Regional Contest Web Site.  At the ICPC World Finals, no printed materials or electronic devices may be brought into the contest area.  On-line reference materials will be made available as described in the Programming Environment Web Site (https://icpc.baylor.edu/worldfinals/programming-environment).  Each team will be permitted to provide a PDF of up to 25 pages of notes within the limits described during Team Certification.  Three copies will be printed and placed at the team's workstation for use during the ICPC World Finals."
+                }
+              ]
+            },
+            {
+              head: 'Hardware Specification',
+              texts: [{ text: 'CPU: Intel Core i5 2500 3.30 GHz or better' }, { text: 'RAM: 4 GB' }]
+            },
+            {
+              head: 'Software Specification',
+              texts: [
+                { text: 'OS: Ubuntu 18.04.3' },
+                { text: 'Desktop: GNOME' },
+                { text: 'Editors: vim 8.0, gvim 8.0, emacs 25.2.2, gedit 3.28, geany 1.32, kate 17.12' },
+                {
+                  text:
+                    'Languages: Java - OpenJDK version 11.0.4 (11.0.4+11-post-Ubuntu-1ubuntu218.04.3), C - gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) with compiler option -O2, C++ - g++ version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1) with compiler option -std=c++14 -O2'
+                },
+                {
+                  text:
+                    'IDEs: Eclipse JDT 2019-03, configured with Java, Intellij IDEA Community Edition 2019.2.3, configured with Java, Code::Blocks 16.01, configured with C/C++'
                 }
               ]
             },

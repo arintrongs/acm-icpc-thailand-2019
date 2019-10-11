@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Rules from './view/Rules.vue'
 import Home from './view/Home.vue'
-import Contest from './view/Contest.vue'
+import About from './view/About.vue'
 import Contacts from './view/Contacts.vue'
+import Accomodations from './view/Accomodations'
+import Transportation from './view/Transportation'
 
 import RulePart from './components/RulePart.vue'
 import ContactPart from './components/ContactPart.vue'
@@ -31,8 +33,10 @@ Vue.config.productionTip = false
 const routes = [
   { path: '/', component: Home },
   { path: '/rules', component: Rules },
-  { path: '/contest', component: Contest },
-  { path: '/contacts', component: Contacts }
+  { path: '/about', component: About },
+  { path: '/contacts', component: Contacts },
+  { path: '/accomodations', component: Accomodations },
+  { path: '/transportation', component: Transportation }
 ]
 
 const router = new VueRouter({
